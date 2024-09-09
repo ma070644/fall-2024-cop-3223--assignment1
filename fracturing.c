@@ -43,25 +43,25 @@ int main(int argc, char **argv) {
 double calculateDistance() {
      double x1, y1, x2, y2;
 
-    printf("Enter coordinates for point #1:\n");
+    printf("Input coordinates for point #1:\n");
     scanf("%lf %lf", &x1, &y1);
     
-    printf("Enter coordinates for point #2:\n");
+    printf("Input coordinates for point #2:\n");
     scanf("%lf %lf", &x2, &y2);
 
     double distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 
-    printf("Point #1 entered: x1 = %.2f; y1 = %.2f\n", x1, y1);
-    printf("Point #2 entered: x2 = %.2f; y2 = %.2f\n", x2, y2);
+    printf("x1 = %.2f; y1 = %.2f\n", x1, y1);
+    printf("x2 = %.2f; y2 = %.2f\n", x2, y2);
     printf("The distance between the two points is %.2f\n", distance);
 
     return distance;
 }
 
 
-// Purpose: calculates the perimeter of a using the diameter, distance.
+// Purpose: calculates the perimeter.
 
-// Output: prints the two points and the perimeter.
+// Output: prints the points and the perimeter.
 
 //Precondition: calls the calculateDistance function to get the diameter.
 
@@ -73,13 +73,13 @@ double calculatePerimeter() {
 
     printf("The perimeter of the city encompassed by your request is %.2f\n", perimeter);
 
-    return 3.0;
+    return 2.0;
 }
 
 
 // Purpose: calculates the area of a circle using the diameter, distance.
 
-// Output: prints the two points and the area.
+// Output: prints the points and the area.
 
 //Precondition: calls the calculateDistance function to get the diameter.
 
@@ -98,26 +98,16 @@ double calculateArea() {
 
 // Purpose: calculates the width which is equivalent to the diameter, distance.
 
-// Output: prints the two points and the width.
+// Output: prints the points and the width.
 
 //Precondition: calls the calculateDistance function to get the diameter.
 
 //Postcondition: returns a difficulty rating.
 
 double calculateWidth() {
-     double x1, y1, x2, y2;
-
-    printf("Enter coordinates for point #1:\n");
-    scanf("%lf %lf", &x1, &y1);
+     double diameter = calculateDistance();
     
-    printf("Enter coordinates for point #2:\n");
-    scanf("%lf %lf", &x2, &y2);
-
-    double width = fabs(x2 - x1);
-
-    printf("Point #1 entered: x1 = %.2f; y1 = %.2f\n", x1, y1);
-    printf("Point #2 entered: x2 = %.2f; y2 = %.2f\n", x2, y2);
-    printf("The width of the city encompassed by your request is %.2f\n", width);
+    printf("The width of the city encompassed by your request is %.2f\n", diameter);
 
     return 2.0;
 }
@@ -125,26 +115,16 @@ double calculateWidth() {
 
 // Purpose: calculates the height which is equivalent to the diameter, distance.
 
-// Output: prints the point and the height.
+// Output: prints the points and the height.
 
 //Precondition: calls the calculateDistance function to get the diameter.
 
 //Postcondition: returns a difficulty rating.
 
 double calculateHeight() {
-     double x1, y1, x2, y2;
-
-    printf("Enter coordinates for point #1:\n");
-    scanf("%lf %lf", &x1, &y1);
+     double diameter = calculateDistance();
     
-    printf("Enter coordinates for point #2:\n");
-    scanf("%lf %lf", &x2, &y2);
+    printf("The height of the city encompassed by your request is %.2f\n", diameter);
 
-    double height = fabs(y2 - y1);
-
-    printf("Point #1 entered: x1 = %.2f; y1 = %.2f\n", x1, y1);
-    printf("Point #2 entered: x2 = %.2f; y2 = %.2f\n", x2, y2);
-    printf("The height of the city encompassed by your request is %.2f\n", height);
-
-    return 2.0;
+    return 1.0;
 }
